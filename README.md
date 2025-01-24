@@ -2,7 +2,7 @@ Inspired by
 [libchata](https://github.com/Slackadays/Chata/blob/main/libchata/src/generate_instruction_search.py)'s
 generated code for string lookup on RISC-V instructions. The python script to
 generate the rust code is copied from there
-([generate_instruction_search.py](https://github.com/Slackadays/Chata/blob/main/libchata/src/generate_instruction_search.py).
+([generate_instruction_search.py](https://github.com/Slackadays/Chata/blob/main/libchata/src/generate_instruction_search.py)).
 
 ---
 
@@ -14,11 +14,11 @@ implementations.
 
 |     | Lower bound | Estimate | Upper bound |
 | --- | ----------- | -------- | ----------- |
-| [HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html) | 23.727 ns | 23.766 ns | 23.824 ns |
-| [BTreeMap](https://doc.rust-lang.org/std/collections/struct.BTreeMap.html) | 68.065 ns | 68.153 ns | 68.284 ns |
-| [FxHashMap](https://docs.rs/rustc-hash/latest/rustc_hash/type.FxHashMap.html) | **11.150 ns** | **11.164 ns** | **11.182 ns** |
-| [AHashMap](https://docs.rs/ahash/latest/ahash/struct.AHashMap.html) | 13.134 ns | 13.143 ns | 13.151 ns |
-| [generated](./src/generated.rs) | 12.009 ns | 12.023 ns | 12.039 ns |
+| [HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html) | 23.337 ns | 23.365 ns | 23.408 ns |
+| [BTreeMap](https://doc.rust-lang.org/std/collections/struct.BTreeMap.html) | 77.149 ns | 77.233 ns | 77.354 ns |
+| [FxHashMap](https://docs.rs/rustc-hash/latest/rustc_hash/type.FxHashMap.html) | **10.854 ns** | **10.864 ns** | **10.876 ns** |
+| [AHashMap](https://docs.rs/ahash/latest/ahash/struct.AHashMap.html) | 12.862 ns | 12.872 ns | 12.886 ns |
+| [generated](./src/generated.rs) | 35.405 ns | 35.444 ns | 35.495 ns |
 
 The full report by [criterion](https://docs.rs/criterion/latest/criterion/index.html) is in [results](./results).
 

@@ -45,7 +45,7 @@ def process_depth(depth):
             curr_instr = curr_instr[:-1]
             code += ind + "}\n"
 
-process_depth(1)
+process_depth(0)
 code += indent(0) + "return None;\n"
 code += "}"
 
